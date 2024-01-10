@@ -3,12 +3,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 def machine_learning(request):
-    course = 'machine learning'
-    tclass = 21
-    seat = 20
-    cduration = '2,5 months'
-    offering = {'c' : course, 'tc' : tclass, 'st' : seat, 'cd' : cduration}
-    return render(request,'machine_learning/machine_learning.html', context=offering)
+    teacher = {'names': ['Shakib','Shakil','Mejba','Sohanur']}
+    return render(request,'machine_learning/machine_learning.html', context=teacher)
 
 def random(request):
     return render(request,'machine_learning/random_forest.html')

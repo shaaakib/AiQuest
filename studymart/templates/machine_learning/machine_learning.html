@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>
-      Studymart offering {{c}}. There have more than {{tc}} avaiable {{st}}
-      seats. Finally needed for course complete time {{cd}}
-    </h1>
+    {% for tn in names reversed %} {{forloop.counter}} {{tn}} <br />
+    {% endfor %}
   </body>
 </html>
