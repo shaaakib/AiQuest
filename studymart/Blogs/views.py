@@ -10,9 +10,9 @@ def blog1(request):
 def showformsdata(request):
     if request.method == 'POST':
         fm = TeacherRegistration(request.POST)
-        print(fm)
-        print('This is post statement')
-        print(fm.cleaned_data)
+        if fm.is_valid():
+         print(fm.cleaned_data['password'])
+         print(fm.cleaned_data['repassword'])
     else:
      fm = TeacherRegistration()
      print('This is get statement')
